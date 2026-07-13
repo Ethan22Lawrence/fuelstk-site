@@ -86,11 +86,15 @@
   .proof-text strong { color: var(--text); }
 
   /* Phone mockups */
-  .phones { position: relative; height: 560px; }
+  .phones { position: relative; height: 580px; }
   .phone {
     position: absolute; width: 250px;
     background: #050505; border-radius: 38px; padding: 10px;
     border: 2px solid #2c2c2c; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.6);
+  }
+  .phone-shot {
+    position: absolute; width: 260px; height: auto; display: block;
+    filter: drop-shadow(0 40px 80px rgba(0,0,0,0.6));
   }
   .phone-1 { left: 0; top: 20px; z-index: 2; }
   .phone-2 { left: 190px; top: 110px; z-index: 1; width: 220px; }
@@ -198,7 +202,7 @@
   @media (max-width: 900px) {
     .hero .wrap { grid-template-columns: 1fr; }
     .phones { height: 420px; margin-top: 20px; }
-    .phone { width: 200px; }
+    .phone, .phone-shot { width: 200px; }
     .phone-2 { left: 150px; width: 175px; }
     .nav-links a:not(.nav-cta) { display: none; }
     h1 { font-size: 36px; }
@@ -250,34 +254,8 @@
       </div>
     </div>
     <div class="phones">
-      <div class="phone phone-1">
-        <div class="phone-screen">
-          <div class="phone-notch"></div>
-          <div class="p-title">TODAY'S SUMMARY</div>
-          <div class="p-kcal">2,265 <span style="font-size:11px; color:var(--text-tertiary); font-weight:600;">CAL ON TRACK</span></div>
-          <div class="ring"><div class="ring-inner">165g P<br>225g C<br>65g F</div></div>
-          <div class="p-row"><div class="p-row-left"><div class="p-dot">🍳</div><div><div class="p-row-name">Breakfast</div><div class="p-row-sub">Protein Oats</div></div></div><div class="p-row-cal">540 CAL</div></div>
-          <div class="p-row"><div class="p-row-left"><div class="p-dot">🍗</div><div><div class="p-row-name">Lunch</div><div class="p-row-sub">Chicken Rice Bowl</div></div></div><div class="p-row-cal">690 CAL</div></div>
-          <div class="p-row"><div class="p-row-left"><div class="p-dot">🥩</div><div><div class="p-row-name">Dinner</div><div class="p-row-sub">Steak &amp; Veggies</div></div></div><div class="p-row-cal">750 CAL</div></div>
-        </div>
-      </div>
-      <div class="phone phone-2">
-        <div class="phone-screen">
-          <div class="phone-notch"></div>
-          <div class="p-title">GROCERIES SCANNED</div>
-          <div class="p-kcal" style="font-size:20px;">24 items</div>
-          <div class="p-grid">
-            <div class="p-food">🍗</div><div class="p-food">🥦</div><div class="p-food">🍠</div>
-            <div class="p-food">🥑</div><div class="p-food">🍌</div><div class="p-food">🍅</div>
-            <div class="p-food">🥚</div><div class="p-food">🥕</div><div class="p-food">🍚</div>
-          </div>
-          <div class="p-banner">
-            <div class="p-banner-title">AI PLAN READY</div>
-            <div class="p-banner-sub">We've built your meals for the week to match your goals.</div>
-          </div>
-          <div class="p-btn">VIEW MEAL PLAN</div>
-        </div>
-      </div>
+      <img src="assets/phone-dashboard.png" alt="Fuel STK dashboard" class="phone-shot phone-1">
+      <img src="assets/phone-pantry.png" alt="Fuel STK pantry" class="phone-shot phone-2">
     </div>
   </div>
 </section>
