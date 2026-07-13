@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Fuel STK</title>
+<meta name="description" content="Everything you need to know about Fuel STK and how it can transform your nutrition.">
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/nav-logo.png" alt="Fuel STK">
+    </a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#how">How it works</a>
+      <a href="faq.html" class="active">FAQ</a>
+      <a href="index.html#get-started" class="nav-cta">Get Early Access</a>
+    </div>
+  </nav>
+</header>
+
+<section class="faq-hero">
+  <img src="assets/apple-touch-icon.png" alt="" class="faq-hero-mark">
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span> FAQ</div>
+    <h1>Questions?<br>We've <span class="accent">got answers.</span></h1>
+    <p class="sub">Everything you need to know about Fuel STK and how it can transform your nutrition.</p>
+    <div class="faq-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" id="faqSearch" placeholder="Search questions...">
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="faq-categories" id="faqCategories">
+    <button class="faq-cat active" data-filter="all">All</button>
+    <button class="faq-cat" data-filter="general">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+      General
+    </button>
+    <button class="faq-cat" data-filter="meal-plans">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12a8 8 0 0 0 16 0z"/><path d="M4 12a8 4 0 0 1 16 0"/></svg>
+      Meal Plans
+    </button>
+    <button class="faq-cat" data-filter="groceries">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      Groceries
+    </button>
+    <button class="faq-cat" data-filter="billing">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+      Account &amp; Billing
+    </button>
+    <button class="faq-cat" data-filter="privacy">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg>
+      Privacy &amp; Data
+    </button>
+  </div>
+
+  <div class="faq-list" id="faqList">
+    <details class="faq-item" data-cat="general" open>
+      <summary>What is Fuel STK?<span class="faq-toggle">−</span></summary>
+      <p>Fuel STK is an AI-powered meal planning app that builds meal plans from the groceries you already have. Tell it your goals, stock your pantry, and it creates meals designed to hit your macros — no spreadsheets or guesswork required.</p>
+    </details>
+    <details class="faq-item" data-cat="meal-plans">
+      <summary>How does the AI meal planning work?<span class="faq-toggle">+</span></summary>
+      <p>Fuel STK uses Claude to choose a coherent, realistic set of foods for each meal from your pantry, then a math solver calculates the exact grams needed to hit your macro targets — so the food choices are sensible and the numbers are always precise.</p>
+    </details>
+    <details class="faq-item" data-cat="general">
+      <summary>Do I have to track calories or macros manually?<span class="faq-toggle">+</span></summary>
+      <p>No — Fuel STK calculates your daily targets and builds meal plans to match them automatically. You can also log food manually any time you want to track something outside your plan.</p>
+    </details>
+    <details class="faq-item" data-cat="meal-plans">
+      <summary>What if I have dietary restrictions or food preferences?<span class="faq-toggle">+</span></summary>
+      <p>Fuel STK doesn't currently track allergies or dietary restrictions, so it's important to review any suggested meal before eating it. This is on our roadmap — for now, simply avoid adding foods to your pantry that you can't or don't want to eat.</p>
+    </details>
+    <details class="faq-item" data-cat="groceries">
+      <summary>How do I add my groceries?<span class="faq-toggle">+</span></summary>
+      <p>Scan a barcode or search by name — Fuel STK looks up nutrition info automatically and adds it to your pantry. You can also enter a food manually if it isn't in the database.</p>
+    </details>
+    <details class="faq-item" data-cat="meal-plans">
+      <summary>Can I edit my meal plan?<span class="faq-toggle">+</span></summary>
+      <p>Yes. You can swap ingredients, add or remove foods, and adjust quantities on any meal — Fuel STK will recalculate portions to help keep your day on target.</p>
+    </details>
+    <details class="faq-item" data-cat="general">
+      <summary>Is Fuel STK suitable for everyone?<span class="faq-toggle">+</span></summary>
+      <p>Fuel STK provides general nutrition and meal-planning information — it's not a substitute for medical or dietary advice from a qualified professional. If you have a medical condition or specific health needs, check with a doctor or registered dietitian before making significant changes to your diet.</p>
+    </details>
+    <details class="faq-item" data-cat="privacy">
+      <summary>Is my data secure?<span class="faq-toggle">+</span></summary>
+      <p>Yes. Your data is encrypted in transit, and our database uses row-level security so your information is only ever accessible from your own account. You can permanently delete your account and all associated data at any time from Settings.</p>
+    </details>
+    <details class="faq-item" data-cat="billing">
+      <summary>What are the pricing and subscription options?<span class="faq-toggle">+</span></summary>
+      <p>Fuel STK is currently free during early access. We'll announce pricing details before any paid tier launches — early access users will be the first to know.</p>
+    </details>
+    <details class="faq-item" data-cat="billing">
+      <summary>Can I cancel my subscription anytime?<span class="faq-toggle">+</span></summary>
+      <p>There's no subscription yet — everything is free right now. When a paid tier does launch, cancelling will be simple and immediate, no hoops to jump through.</p>
+    </details>
+  </div>
+  <div class="faq-empty" id="faqEmpty">No questions match your search.</div>
+</div>
+
+<section class="cta-band" id="get-started">
+  <div class="wrap">
+    <div class="cta-left">
+      <div class="cta-icon"><img src="assets/apple-touch-icon.png" alt=""></div>
+      <div>
+        <h2>Still have questions?</h2>
+        <p>Reach out and we'll get back to you — or join the early access list to be the first to try Fuel STK.</p>
+      </div>
+    </div>
+    <div class="store-badges">
+      <a href="mailto:support@fuelstk.com" class="btn-store">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <span><small>Email us at</small><strong>support@fuelstk.com</strong></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <img src="assets/nav-logo.png" alt="Fuel STK">
+        <p>Nutrition. <span class="accent">Stacked</span> for you.</p>
+        <div class="footer-social">
+          <a href="mailto:info@fuelstk.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how">How It Works</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <a href="https://ethan22lawrence.github.io/macro-pantry-legal/privacy.html">Privacy Policy</a>
+        <a href="https://ethan22lawrence.github.io/macro-pantry-legal/terms.html">Terms of Service</a>
+        <a href="mailto:support@fuelstk.com">Contact Support</a>
+      </div>
+    </div>
+    <div class="footer-note">© 2026 Fuel STK. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const items = Array.from(document.querySelectorAll('.faq-item'));
+  const cats = Array.from(document.querySelectorAll('.faq-cat'));
+  const searchInput = document.getElementById('faqSearch');
+  const empty = document.getElementById('faqEmpty');
+  let activeCat = 'all';
+
+  function applyFilter() {
+    const q = searchInput.value.trim().toLowerCase();
+    let visible = 0;
+    for (const item of items) {
+      const matchesCat = activeCat === 'all' || item.dataset.cat === activeCat;
+      const text = item.textContent.toLowerCase();
+      const matchesSearch = !q || text.includes(q);
+      const show = matchesCat && matchesSearch;
+      item.style.display = show ? '' : 'none';
+      if (show) visible++;
+    }
+    empty.style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  cats.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      cats.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCat = btn.dataset.filter;
+      applyFilter();
+    });
+  });
+
+  searchInput.addEventListener('input', applyFilter);
+</script>
+
+</body>
+</html>
