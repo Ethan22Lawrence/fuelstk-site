@@ -241,6 +241,11 @@ footer { padding: 48px 0 28px; border-top: 1px solid var(--border); margin-top: 
   width: 24px; height: 24px; border-radius: 50%; background: var(--surface-alt); flex-shrink: 0;
   display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 16px; font-weight: 700;
 }
+/* The +/− glyph is generated here (not hardcoded in the HTML) so it always
+   reflects the details element's real open/closed state, however it got
+   toggled — clicking, keyboard, or JS. */
+.faq-item summary .faq-toggle::before { content: "+"; }
+.faq-item[open] summary .faq-toggle::before { content: "\2212"; }
 .faq-item[open] summary .faq-toggle { background: var(--primary); color: #0a0a0a; }
 .faq-item p { margin: 0; padding: 0 20px 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
 .faq-empty { text-align: center; padding: 40px 0; color: var(--text-tertiary); font-size: 14px; display: none; }
