@@ -8,6 +8,8 @@
 <link rel="icon" type="image/png" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/style.css">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 
@@ -74,7 +76,7 @@
     </details>
     <details class="faq-item" data-cat="meal-plans">
       <summary>What's the difference between a regular plan and an AI plan?<span class="faq-toggle"></span></summary>
-      <p>Your plan generates automatically from your pantry and targets using the solver, which locks in exact macros every time. Tapping the "✨ AI plan" button additionally uses Claude to pick more coherent, realistic food combinations — the solver still sets the exact grams either way. AI generations are limited per day; the regular plan is unlimited, and you get one free AI generation the first time you build a plan.</p>
+      <p>Your plan generates automatically from your pantry and targets using the solver, which locks in exact macros every time. Tapping the "✨ AI plan" button additionally uses Claude to pick more coherent, realistic food combinations — the solver still sets the exact grams either way. AI generations are limited on a rolling weekly basis; the regular plan is unlimited, and you get one free AI generation the first time you build a plan.</p>
     </details>
     <details class="faq-item" data-cat="general">
       <summary>Do I have to track calories or macros manually?<span class="faq-toggle"></span></summary>
@@ -82,11 +84,19 @@
     </details>
     <details class="faq-item" data-cat="meal-plans">
       <summary>What if I have dietary restrictions or food preferences?<span class="faq-toggle"></span></summary>
-      <p>Fuel STK doesn't currently track allergies or dietary restrictions, so it's important to review any suggested meal before eating it. This is on our roadmap — for now, simply avoid adding foods to your pantry that you can't or don't want to eat.</p>
+      <p>Fuel STK doesn't track allergies or dietary restrictions — since every meal is built only from foods already in your pantry, your pantry itself is the safeguard: simply don't add foods you can't or don't want to eat, and Fuel STK will never suggest them. Always review a suggested meal before eating it, just as you would any recipe.</p>
     </details>
     <details class="faq-item" data-cat="how-to">
       <summary>How do I add my groceries?<span class="faq-toggle"></span></summary>
       <p>Scan a barcode or search by name — Fuel STK looks up nutrition info automatically and adds it to your pantry. You can also enter a food manually if it isn't in the database.</p>
+    </details>
+    <details class="faq-item" data-cat="how-to">
+      <summary>Should I add a food by weight or by unit?<span class="faq-toggle"></span></summary>
+      <p>By default, foods are weighed in grams. If something's easier to count than weigh — an egg, a scoop, a slice — you can name a unit for it instead and set how many grams one unit weighs, plus how many units make up one serving. Either way, the plan tracks and scales the exact amount.</p>
+    </details>
+    <details class="faq-item" data-cat="how-to">
+      <summary>What are the pantry categories (Protein, Carbs, Fat, Misc) for?<span class="faq-toggle"></span></summary>
+      <p>Every food is grouped into Protein, Carbs, Fat, or Misc based on its dominant macro, so you can filter and organize your pantry at a glance. Misc is for anything you don't want the planner treating as a real ingredient — condiments, sauces, and extras like teriyaki sauce or ketchup are auto-sorted there, and you can manually set any food (like ice cream) to Misc yourself. Misc foods stay in your pantry and can be logged anytime — they're just excluded from auto-generated plans, so add them to a meal yourself if you want them included.</p>
     </details>
     <details class="faq-item" data-cat="how-to">
       <summary>Can I mark a food as out of stock without deleting it?<span class="faq-toggle"></span></summary>
@@ -94,7 +104,11 @@
     </details>
     <details class="faq-item" data-cat="how-to">
       <summary>Can I remove a food from my pantry completely?<span class="faq-toggle"></span></summary>
-      <p>Yes — tap the trash icon on any pantry item to remove it for good. If you just don't have it right now but might again later, marking it out of stock instead is usually more convenient.</p>
+      <p>Yes — tap the trash icon (<ion-icon name="trash-outline" aria-hidden="true" style="font-size:16px;vertical-align:-3px;color:var(--primary)"></ion-icon>) on any pantry item to remove it for good. If you just don't have it right now but might again later, marking it out of stock instead is usually more convenient.</p>
+    </details>
+    <details class="faq-item" data-cat="how-to">
+      <summary>Can I limit a food to certain meals?<span class="faq-toggle"></span></summary>
+      <p>Yes — when adding a food (or editing it later from the Pantry tab), you can tag which meals it's eligible for. Leave it untagged and it's usable in any meal; tag it and your plan only uses it for the meals you picked — e.g. tag deli turkey for Lunch only so it never shows up at breakfast.</p>
     </details>
     <details class="faq-item" data-cat="how-to">
       <summary>How do I set my macro targets?<span class="faq-toggle"></span></summary>
@@ -105,16 +119,36 @@
       <p>Yes. You can swap ingredients, add or remove foods, and adjust quantities on any meal — Fuel STK will recalculate portions to help keep your day on target.</p>
     </details>
     <details class="faq-item" data-cat="how-to">
+      <summary>Can I add extra food to a specific meal?<span class="faq-toggle"></span></summary>
+      <p>Yes — tap "Add food" (<ion-icon name="add-circle-outline" aria-hidden="true" style="font-size:16px;vertical-align:-3px;color:var(--primary)"></ion-icon>) at the bottom of any meal card to pull in another item from your pantry.</p>
+    </details>
+    <details class="faq-item" data-cat="how-to">
+      <summary>How do I change how much of a food is in a meal?<span class="faq-toggle"></span></summary>
+      <p>Tap the pencil icon (<ion-icon name="create-outline" aria-hidden="true" style="font-size:16px;vertical-align:-3px;color:var(--primary)"></ion-icon>) on any item in a meal to adjust its quantity directly.</p>
+    </details>
+    <details class="faq-item" data-cat="how-to">
+      <summary>How do I remove a food from a meal?<span class="faq-toggle"></span></summary>
+      <p>Tap the trash icon (<ion-icon name="trash-outline" aria-hidden="true" style="font-size:16px;vertical-align:-3px;color:var(--primary)"></ion-icon>) next to any item in a meal and confirm — it's removed from that meal, not from your pantry.</p>
+    </details>
+    <details class="faq-item" data-cat="how-to">
       <summary>How do I swap a food in my meal plan?<span class="faq-toggle"></span></summary>
-      <p>Tap the swap icon on any item in a meal, then pick a replacement from your pantry. Fuel STK tries to match the macros of the food you're swapping out, so a swap doesn't throw off what that meal was already hitting.</p>
+      <p>Tap the swap icon (<ion-icon name="swap-horizontal-outline" aria-hidden="true" style="font-size:16px;vertical-align:-3px;color:var(--primary)"></ion-icon>) on any item in a meal, then pick a replacement from your pantry. Fuel STK tries to match the macros of the food you're swapping out, so a swap doesn't throw off what that meal was already hitting.</p>
     </details>
     <details class="faq-item" data-cat="how-to">
       <summary>Can I replace an entire meal instead of editing it?<span class="faq-toggle"></span></summary>
-      <p>Yes — tap "Replace" on a meal to swap the whole thing for one of your saved favorites in one step, rather than editing individual foods.</p>
+      <p>Yes — tap "Replace" (<ion-icon name="swap-horizontal-outline" aria-hidden="true" style="font-size:16px;vertical-align:-3px;color:var(--primary)"></ion-icon>) on a meal to swap the whole thing for one of your saved favorites in one step, rather than editing individual foods.</p>
     </details>
     <details class="faq-item" data-cat="how-to">
       <summary>How do I set up my meal schedule?<span class="faq-toggle"></span></summary>
-      <p>From the Plan tab, tap the meal schedule banner to open the editor. There you can choose how many meals and snacks you eat each day, adjust how much of your daily macros each one should carry, and pin a specific favorite meal to any slot so it shows up automatically.</p>
+      <p>From the Plan tab, tap the meal schedule banner (<ion-icon name="time-outline" aria-hidden="true" style="font-size:16px;vertical-align:-3px;color:var(--primary)"></ion-icon>) to open the editor. There you can choose how many meals and snacks you eat each day, adjust how much of your daily macros each one should carry, and pin a specific favorite meal to any slot so it shows up automatically.</p>
+    </details>
+    <details class="faq-item" data-cat="how-to">
+      <summary>What do a meal's Size and Emphasis settings do?<span class="faq-toggle"></span></summary>
+      <p>Size sets how big a share of your daily targets that meal carries (Snack, Small, Medium, or Large). Emphasis shifts how that meal's calories split across protein, carb, and fat — it doesn't change your day's totals, just how that one meal is balanced. Reorder meals with the up/down arrows on each meal card in the schedule editor.</p>
+    </details>
+    <details class="faq-item" data-cat="how-to">
+      <summary>What's a fixed meal?<span class="faq-toggle"></span></summary>
+      <p>A fixed meal is a schedule slot pinned to one of your saved favorites — it always uses that exact meal instead of the planner building one from your pantry, so Size and Emphasis don't apply to it. Handy for something you eat the same way every day, like a protein shake.</p>
     </details>
     <details class="faq-item" data-cat="how-to">
       <summary>Can I add an extra meal just for one day?<span class="faq-toggle"></span></summary>
@@ -125,12 +159,16 @@
       <p>This shows up when your current pantry genuinely can't reach one of your macro targets — usually because it's missing enough of a particular macro (like carb-dense foods). The banner tells you which macro is short; adding more variety to your pantry is the fix.</p>
     </details>
     <details class="faq-item" data-cat="how-to">
-      <summary>How many AI meal plans can I generate per day?<span class="faq-toggle"></span></summary>
-      <p>The free tier includes a small number of AI generations per day, which resets at your local midnight — plus one bonus free generation the first time you build a plan. Your regular (non-AI) plan is unlimited and always available.</p>
+      <summary>How many AI meal plans can I generate?<span class="faq-toggle"></span></summary>
+      <p>The free tier includes a small number of AI generations on a rolling 7-day basis (not a fixed calendar week) — plus one bonus free generation the first time you build a plan. Your regular (non-AI) plan is unlimited and always available.</p>
+    </details>
+    <details class="faq-item" data-cat="how-to">
+      <summary>How do I report a bug or send feedback?<span class="faq-toggle"></span></summary>
+      <p>During testing, tap the feedback icon (<ion-icon name="chatbox-ellipses-outline" aria-hidden="true" style="font-size:16px;vertical-align:-3px;color:var(--primary)"></ion-icon>) in the top-left of any main screen to report a bug, flag something confusing, or suggest an improvement — pick a category, add a note, and it goes straight to us. This button is only available during the testing period and won't be in the final App Store release.</p>
     </details>
     <details class="faq-item" data-cat="how-to">
       <summary>How do I log what I actually ate?<span class="faq-toggle"></span></summary>
-      <p>Tap "I ate this" on any meal in your plan to log it in one tap, or add food manually from the Log tab. Once a meal is logged, Fuel STK never changes its portions again — even if you edit or recalculate the rest of the day.</p>
+      <p>Tap "I ate this" (<ion-icon name="journal-outline" aria-hidden="true" style="font-size:16px;vertical-align:-3px;color:var(--primary)"></ion-icon>) on any meal in your plan to log it in one tap, or add food manually from the Log tab. Once a meal is logged, Fuel STK never changes its portions again — even if you edit or recalculate the rest of the day.</p>
     </details>
     <details class="faq-item" data-cat="how-to">
       <summary>Can I log or edit food for a previous day?<span class="faq-toggle"></span></summary>
@@ -138,11 +176,11 @@
     </details>
     <details class="faq-item" data-cat="how-to">
       <summary>How do I unlog a meal I logged by mistake?<span class="faq-toggle"></span></summary>
-      <p>Tap the log icon on a meal you've already logged and confirm you want to unlog it — it's removed from your log and can be logged again later if needed.</p>
+      <p>Tap the log icon (<ion-icon name="journal" aria-hidden="true" style="font-size:16px;vertical-align:-3px;color:var(--primary)"></ion-icon>) on a meal you've already logged and confirm you want to unlog it — it's removed from your log and can be logged again later if needed.</p>
     </details>
     <details class="faq-item" data-cat="how-to">
       <summary>Can I save a meal as a favorite to reuse later?<span class="faq-toggle"></span></summary>
-      <p>Yes — tap "Save as favorite" on any meal in your plan. You can pull a favorite back into a future plan, or pin it to a specific slot in your meal schedule so it always shows up there.</p>
+      <p>Yes — tap "Save as favorite" (<ion-icon name="heart-outline" aria-hidden="true" style="font-size:16px;vertical-align:-3px;color:var(--primary)"></ion-icon>) on any meal in your plan. You can pull a favorite back into a future plan, or pin it to a specific slot in your meal schedule so it always shows up there.</p>
     </details>
     <details class="faq-item" data-cat="how-to">
       <summary>Can I track my weight over time?<span class="faq-toggle"></span></summary>
@@ -158,7 +196,7 @@
     </details>
     <details class="faq-item" data-cat="how-to">
       <summary>Where do I find the Privacy Policy and Terms of Service?<span class="faq-toggle"></span></summary>
-      <p>Both are linked from the Settings screen in the app (tap the gear icon), as well as at the bottom of this page.</p>
+      <p>Both are linked from the Settings screen in the app (tap the gear icon — <ion-icon name="settings-outline" aria-hidden="true" style="font-size:16px;vertical-align:-3px;color:var(--primary)"></ion-icon>), as well as at the bottom of this page.</p>
     </details>
     <details class="faq-item" data-cat="general">
       <summary>Is Fuel STK suitable for everyone?<span class="faq-toggle"></span></summary>
@@ -223,7 +261,7 @@
     <div class="footer-grid">
       <div class="footer-brand-col">
         <img src="assets/nav-logo.png" alt="Fuel STK">
-        <p>Nutrition. <span class="accent">Stacked</span> for you.</p>
+        <p>Your fuel <span class="accent">Stacked</span></p>
         <div class="footer-social">
           <a href="mailto:info@fuelstk.com" aria-label="Email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
