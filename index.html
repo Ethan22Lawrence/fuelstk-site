@@ -17,12 +17,21 @@
       <img src="assets/nav-logo.png" alt="Fuel STK">
     </a>
     <div class="nav-links">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="faq.html">FAQ</a>
       <a href="#get-started" class="nav-cta">Get Early Access</a>
     </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 </header>
+<div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html" class="active">Home</a>
+  <a href="faq.html">FAQ</a>
+  <a href="#get-started" class="nav-cta">Get Early Access</a>
+</div>
 
 <section class="hero">
   <div class="wrap">
@@ -189,6 +198,27 @@
     <div class="footer-note">© 2026 Fuel STK. All rights reserved.</div>
   </div>
 </footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const mobileNav = document.getElementById('mobileNav');
+  const backdrop = document.getElementById('mobileNavBackdrop');
+  function closeMobileNav() {
+    mobileNav.classList.remove('open');
+    backdrop.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+  function openMobileNav() {
+    mobileNav.classList.add('open');
+    backdrop.classList.add('open');
+    navToggle.setAttribute('aria-expanded', 'true');
+  }
+  navToggle.addEventListener('click', () => {
+    mobileNav.classList.contains('open') ? closeMobileNav() : openMobileNav();
+  });
+  backdrop.addEventListener('click', closeMobileNav);
+  mobileNav.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMobileNav));
+</script>
 
 </body>
 </html>
